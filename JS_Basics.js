@@ -132,3 +132,24 @@ while(x<=5) {
 //3
 //4
 //5
+
+
+
+
+
+
+//do-while loop---ex
+let y =1;
+
+do{
+    console.log(y);
+    y++;
+}
+
+while(y<=5);
+//output:
+//1
+//2
+//3
+//4
+//5
