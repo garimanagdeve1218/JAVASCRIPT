@@ -17,3 +17,8 @@ console.log(lastName);
 
 
 
+//ternary operator
+let age=17;
+let status = (age>=18) ? 'Yes Vote' : 'can not vote';
+console.log(status);
+//output: can not vote
