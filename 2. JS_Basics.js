@@ -199,11 +199,124 @@ Rectangle {length: 4, breadth: 6, draw: ƒ}
 
 
 
+//dynamic nature of objects---
+    
+//to add a new property to object---
+function Rectangle(l,b){
+    this.length = l;
+    this.breadth = b;
+    this.draw = function(){
+        console.log('drawing');
+    }
+}
+
+let rectangleObject = new Rectangle(4,6);
+
+rectangleObject.color = 'yellow';
+console.log(rectangleObject);
+
+/*
+output:
+Rectangle {length: 4, breadth: 6, color: 'yellow', draw: ƒ}
+*/
+
+//to delete a property from an object---
+function Rectangle(l,b){
+    this.length = l;
+    this.breadth = b;
+    this.draw = function(){
+        console.log('drawing');
+    }
+}
+
+let rectangleObject = new Rectangle(4,6);
+
+rectangleObject.color = 'yellow';
+console.log(rectangleObject);
+
+delete rectangleObject.color;
+console.log(rectangleObject);
+
+/*
+output:
+Rectangle {length: 4, breadth: 6, draw: ƒ}
+*/
+
+
+
+
+
+    
+//constructor property---
+//on console---
+rectangleObject.constructor
+
+/*
+output:
+ƒ Rectangle(l,b){
+    this.length = l;
+    this.breadth = b;
+    this.draw = function(){
+        console.log('drawing');
+    }
+}
+*/
 
 
 
 
 
 
+
+//primitive
+let a = 10;
+let b = a;
+
+a++;
+console.log(a);
+console.log(b);
+
+/*
+output:
+11
+10
+*/
+
+
+
+
+//reference
+let a = { value: 10};
+let b = a;
+
+a.value++;
+
+console.log(a.value);
+console.log(b.value);
+
+/* 
+output:
+11
+11
+*/
+
+
+
+
+
+//jab primitive pass krte h kisi function me toh uski copy banti hai alag se---
+let a = 10;
+
+function increment(a){
+    a++;
+}
+
+increment(a);
+
+console.log(a);
+/*
+output:
+10
+*/
 
 
