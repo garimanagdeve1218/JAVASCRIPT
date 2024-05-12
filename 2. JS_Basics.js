@@ -320,3 +320,144 @@ output:
 */
 
 
+
+
+
+//for-in loop---this loop is used to iterate the keys in any object---
+
+let rectangle = {
+    length:2,
+    breadth:4
+};
+
+for(let key in rectangle){
+    console.log(key);                         //for-in loop
+}
+
+    
+/*
+output:
+length
+breadth
+*/
+
+
+
+
+
+//for-in loop---
+//when we want to iterate the values as well along with the keys---
+    
+let rectangle = {
+    length:2,
+    breadth:4
+};
+
+for(let key in rectangle){
+    //keys are reflected through key variable
+    //values are reflected through rectangle[key]
+    console.log(key , rectangle[key]);
+}
+
+/*
+output:
+length 2
+breadth 4
+*/
+
+
+
+
+//to check whether some property exists in the object or not---
+//ex--- checking if color exists or not---
+
+let rectangle = {
+    length:2,
+    breadth:4
+};
+
+if('color' in rectangle){
+    console.log('present');
+}
+else{
+    console.log('absent');
+}
+
+/*
+output:
+absent
+*/
+
+
+
+
+
+
+//object cloning---
+    
+//iteration---(1)
+let src = {
+    a:10,
+    b:20,
+    c:30
+};
+
+let destination = {};
+
+for(let key in src){
+    destination [key] = src[key];
+}
+
+console.log(destination);
+
+/*
+output:
+{a: 10, b: 20, c: 30}
+*/
+
+
+
+
+
+
+//Assign---(2)
+let src= {
+    a:10,
+    b:20,
+    c:30
+}
+
+let destination = Object.assign({},src);
+
+console.log(destination);
+
+/*
+output:
+{a: 10, b: 20, c: 30}
+*/
+
+
+
+
+    
+//more src are also possible
+let src= {
+    a:10,
+    b:20,
+    c:30
+};
+
+let src2 = { value:25};
+
+let destination = Object.assign({},src, src2);
+
+console.log(destination);
+
+/*
+output:
+{a: 10, b: 20, c: 30, value: 25}
+*/
+
+
+
+
