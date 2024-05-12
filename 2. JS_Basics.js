@@ -395,7 +395,7 @@ absent
 
 //object cloning---
     
-//iteration---(1)
+//iteration---(1 for object cloning:)
 let src = {
     a:10,
     b:20,
@@ -420,7 +420,7 @@ output:
 
 
 
-//Assign---(2)
+//Assign---(2) for object cloning:
 let src= {
     a:10,
     b:20,
@@ -461,3 +461,19 @@ output:
 
 
 
+
+//spread---(3) for object cloning:
+let src = {
+    a : 10,
+    b : 20,
+    c : 30
+};
+
+let destination = {...src};
+
+console.log(destination);
+
+/*
+output:
+{a: 10, b: 20, c: 30}
+*/
