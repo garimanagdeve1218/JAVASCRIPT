@@ -230,12 +230,114 @@ console.log(combined)
 
 //output:[1, 2, 3, 'a', 4, 5, 6, 'b']
 
-
-
-
 //copy kaise create kare---
 let another = [...combined];
 
+
+
+
+
+//ITERATING AN ARRAY---
+//(1)for-of loop---
+let arr = [10,20,30,40,50];
+
+for(let value of arr){
+    console.log(value);
+}
+/*
+output:
+10
+20
+30
+40
+50
+*/
+
+
+
+
+//(2)using for-each loop---
+arr.forEach(function(number){
+    console.log(number);
+});
+/*
+output:
+10
+20
+30
+40
+50
+*/
+
+
+
+
+//joining array---
+let numbers = [10,20,30,40,50];
+joined = numbers.join('+');
+console.log(joined);
+
+//output:10+20+30+40+50
+
+
+
+
+
+//sorting arrays---
+ let numbers = [40,30,10,20,50];
+
+ numbers.sort();
+
+ console.log(numbers);
+
+//output: [10, 20, 30, 40, 50]
+
+
+
+
+
+//FILTERING ARRAYS---
+//maine filter lagaya array p ki mujhe srif positive values dikhao---
+
+let numbers = [2,3,-1,-5];
+let filtered = numbers.filter(function(value){
+    return value >= 0;
+})
+console.log(filtered);
+
+//output:[2, 3]
+
+
+
+
+
+//MAPPING ARRAYS---
+let numbers = [7,8,9,10];
+
+let items = numbers.map(function(value){
+    return 'student_no' + value;
+})
+
+console.log(items);
+
+//output: ['student_no7', 'student_no8', 'student_no9', 'student_no10']
+
+
+
+//MAPPING WITH OBJECTS---
+let numbers = [1,2,-6,-7];
+
+let filtered = numbers.filter(value => value >= 0);
+
+let items = filtered.map(function(num){
+    return{value: num};
+})
+console.log(items);
+
+//output:
+//(2) [{…}, {…}]
+//0: {value: 1}
+//1: {value: 2}
 
 
 
