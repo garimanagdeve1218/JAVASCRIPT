@@ -137,18 +137,105 @@ console.log(numbers.includes(7));
 //on refrences---
 //CALLBACK FUNCTION---
 let courses = [
-    {no:1, naam:'Love'},       //object1
+    {no:1, naam: 'Love'},      //object1
     {no:2, naam: 'Garima'}     //object2
 ];
 
 console.log(courses);
 
 let course = courses.find(function(course){
-    return course.naam === 'Love'
+    return course.naam === 'Love';
 })
 
 console.log(course);
 
 //output:{no: 1, naam: 'Love'}
+
+
+
+
+
+//isi code ko chota likhna ho toh arrow function ka use kro---
+let courses = [
+    {no:1, naam:'Love'},       //object1
+    {no:2, naam: 'Garima'}     //object2
+];
+
+console.log(courses);
+
+let course = courses.find( course => course.naam === 'Love'
+);
+
+console.log(course);
+
+//output:{no: 1, naam: 'Love'}
+
+
+
+
+
+
+// to empty an array---
+//length of array zero krdo---
+let numbers = [1,2,3,4,5];
+let numbers2 = numbers;
+
+numbers.length=0;                       //other way : numbers.splice(0,numbers.length);
+
+console.log(numbers);
+console.log(numbers2);
+
+//output:
+//[]
+//[]
+
+
+
+
+
+//to combine two arrays---
+//contat()---
+let first=[1,2,3];
+let second=[4,5,6];
+
+let combined = first.concat(second);
+
+console.log(combined);
+
+//output:
+// [1, 2, 3, 4, 5, 6]
+
+
+
+
+
+//concatination using spread operator---
+let first=[1,2,3];
+let second=[4,5,6];
+
+let combined = [...first, ...second];
+console.log(combined)
+
+//output:[1, 2, 3, 4, 5, 6]
+
+
+
+
+//if you want to add in between---
+let first=[1,2,3];
+let second=[4,5,6];
+
+let combined = [...first,'a', ...second,'b'];
+console.log(combined)
+
+//output:[1, 2, 3, 'a', 4, 5, 6, 'b']
+
+
+
+
+//copy kaise create kare---
+let another = [...combined];
+
+
 
 
